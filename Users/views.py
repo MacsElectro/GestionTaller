@@ -114,7 +114,7 @@ def profile(request, user_id):
         avatar = ''
 
     context = {'user': user, 'avatar': avatar, 'title': 'Profile'}
-    return render(request, 'Users/profile.html', context)
+    return render(request, 'gestion_taller/profile.html', context)
 
 
 @user_passes_test(lambda u: u.is_superuser)   # solo los superusers pueden cambiar el avatar
